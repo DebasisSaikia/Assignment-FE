@@ -7,6 +7,7 @@ import {AiOutlineEdit} from 'react-icons/ai'
 import {AiFillDelete} from 'react-icons/ai'
 import { useState } from 'react/cjs/react.development';
 import { ToastContainer} from 'react-toastify';
+import { SuccessMessage } from '../../utils/Toast';
 
 const Users = ({name, email, id, onEdit, onDelete ,phone,website}) => {
     const [liked,setLiked]=useState(false)
@@ -18,6 +19,9 @@ const Users = ({name, email, id, onEdit, onDelete ,phone,website}) => {
 
     const likePost=()=>{
         setLiked(prev=>!prev)
+        if(!liked){
+            SuccessMessage('You Liked the User')
+        } 
     }
 
     const handleOnEditSubmit = (e) => {

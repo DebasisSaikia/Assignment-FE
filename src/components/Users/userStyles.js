@@ -21,7 +21,7 @@ height: 450px;
 border: 1px solid #dfe6e9;
 border-radius:1px ;
 &:hover{
-    transform: scale(1.02);
+    opacity: 0.9;
     transition: all 0.3s ease-in-out;
 }
 `
